@@ -1,0 +1,79 @@
+/* Stock table custom styles */
+.stock-table-container {
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  overflow: hidden;
+}
+
+.stock-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.stock-table thead {
+  background-color: #1f2937;
+}
+
+.stock-table thead th {
+  padding: 1rem 2rem;
+  text-align: left;
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: white;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.stock-table thead th.text-right {
+  text-align: right;
+}
+
+.stock-table tbody tr {
+  border-bottom: 1px solid #e5e7eb;
+  transition: background-color 0.15s ease;
+}
+
+.stock-table tbody tr:hover {
+  background-color: #f9fafb;
+}
+
+.stock-table tbody tr:last-child {
+  border-bottom: none;
+}
+
+.stock-table tbody td {
+  padding: 1rem 2rem;
+  white-space: nowrap;
+}
+
+.stock-symbol {
+  font-size: 1rem;
+  font-weight: 700;
+  color: #111827;
+}
+
+.stock-price {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #111827;
+  text-align: right;
+}
+
+.stock-change {
+  font-size: 1rem;
+  font-weight: 600;
+  text-align: right;
+}
+
+.stock-change.positive {
+  color: #059669;
+}
+
+.stock-change.negative {
+  color: #dc2626;
+}
+
+.stock-change.neutral {
+  color: #6b7280;
+}
