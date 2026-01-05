@@ -38,16 +38,36 @@ export const useStockPolling = (pollInterval: number = 30000): UseStockPollingRe
 
       const stockDataList = await fetchMultipleStockQuotes(DEFAULT_STOCKS);
 
-      const tableData: StockTableRow[] = stockDataList
-        .filter((data) => data.quote !== null)
-        .map((data) => ({
-          symbol: data.symbol,
-          price: data.quote!.c,
-          change: data.quote!.d,
-          changePercent: data.quote!.dp,
-        }));
+      // on initial load, filter out nulls
+      if (stocks.length === 0) {
+        const tableData: StockTableRow[] = stockDataList
+          .filter((data) => data.quote !== null)
+          .map((data) => ({
+            symbol: data.symbol,
+            price: data.quote!.c,
+            change: data.quote!.d,
+            changePercent: data.quote!.dp,
+          }));
+        setStocks(tableData);
+      } else {
+        // on refresh, merge new data with existing to preserve data for failed stocks
+        const stockMap = new Map(stocks.map(s => [s.symbol, s]));
 
-      setStocks(tableData);
+        stockDataList.forEach((data) => {
+          if (data.quote !== null) {
+            stockMap.set(data.symbol, {
+              symbol: data.symbol,
+              price: data.quote.c,
+              change: data.quote.d,
+              changePercent: data.quote.dp,
+            });
+          }
+          // if quote is null, keep existing data in stockMap
+        });
+
+        setStocks(Array.from(stockMap.values()));
+      }
+
       setLastUpdated(new Date());
     } catch (err) {
       setError(err instanceof Error ? err.message : 'failed to load stock data');
