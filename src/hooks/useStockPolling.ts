@@ -1,6 +1,6 @@
 import { useState, useEffect, useCallback, useRef } from 'react';
 import type { StockTableRow } from '../types/quote.ts';
-import { fetchMultipleStockQuotes, DEFAULT_STOCKS } from '../services/finnhubApi';
+import { fetchMultipleStockQuotes, DEFAULT_STOCKS } from '../services/alphaVantageApi';
 
 interface UseStockPollingResult {
   stocks: StockTableRow[];

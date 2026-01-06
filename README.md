@@ -7,12 +7,14 @@ A simple real-time stock price dashboard showing current prices for 20 popular c
 - automatic updates every 30 seconds
 - manual refresh button
 - responsive table with price change indicators
+- charts displaying data from past 30 days
 
 ## tech stack
 - react + typescript
 - vite
 - tailwind css
-- finnhub api
+- alpha vantage api
+- chart.js
 
 ## setup
 
@@ -23,10 +25,10 @@ npm install
 
 2. create `.env` file:
 ```
-VITE_FINNHUB_API_KEY=your_api_key_here
+VITE_ALPHA_VANTAGE_API_KEY=your_alpha_vantage_api_key_here
 ```
 
-3. get free api key from [finnhub.io](https://finnhub.io)
+3. get free api key from [alphavantage.co](https://alphavantage.co)
 
 4. run development server:
 ```bash
