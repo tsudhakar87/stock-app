@@ -26,6 +26,7 @@ npm install
 
 2. create `.env` file:
 ```
+VITE_FINNHUB_API_KEY=your_finnhub_api_key_here
 VITE_ALPHA_VANTAGE_API_KEY=your_alpha_vantage_api_key_here
 ```
 
