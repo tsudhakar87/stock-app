@@ -31,7 +31,7 @@ VITE_FINNHUB_API_KEY=your_finnhub_api_key_here
 VITE_ALPHA_VANTAGE_API_KEY=your_alpha_vantage_api_key_here
 ```
 
-3. get free api key from [alphavantage.co](https://alphavantage.co)
+3. get free api key from [alphavantage.co](https://alphavantage.co) and [finnhub.io](https://finnhub.io)
 
 4. run development server:
 ```bash
