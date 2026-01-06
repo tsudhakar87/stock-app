@@ -1,6 +1,7 @@
 # stock price dashboard
 
 A simple real-time stock price dashboard showing current prices for 20 popular companies
+
 Deployed at https://stock-app-seven-virid.vercel.app/
 
 ## features
