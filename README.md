@@ -1,6 +1,7 @@
 # stock price dashboard
 
 A simple real-time stock price dashboard showing current prices for 20 popular companies
+Deployed at https://stock-app-seven-virid.vercel.app/
 
 ## features
 - real-time stock prices from finnhub api
@@ -13,7 +14,7 @@ A simple real-time stock price dashboard showing current prices for 20 popular c
 - react + typescript
 - vite
 - tailwind css
-- alpha vantage api
+- finnhub api + alpha vantage api
 - chart.js
 
 ## setup
